@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6A5D4252212FF8F200349332"
+               BlueprintIdentifier = "6A4B5F8821346B24006CE699"
                BuildableName = "CleanFlickrUITests.xctest"
                BlueprintName = "CleanFlickrUITests"
                ReferencedContainer = "container:CleanFlickr.xcodeproj">
