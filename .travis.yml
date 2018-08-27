@@ -1,6 +1,4 @@
-os: osx
 language: swift
-osx_image: xcode9.4
 xcode_project: CleanFlickr.xcodeproj
 xcode_scheme: CleanFlickrTests
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
