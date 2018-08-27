@@ -43,16 +43,16 @@ class CleanFlickrUITests: XCTestCase {
         app.keys["g"].tap()
         app.keys["o"].tap()
         app.buttons["Search"].tap()
-        app.otherElements["Hotel Indigo"].tap()
-        let backToTheMap = app.navigationBars["CleanFlickr.PhotoDetailView"].buttons["Flickr image search"]
-        backToTheMap.tap()
-        let map = app.otherElements["PopoverDismissRegion"]
-        map.tap()
-        backToTheMap.tap()
-        map.swipeLeft()
-        sleep(3)
-        app.otherElements["Wuppertal"].tap()
-        sleep(3)
+//        app.otherElements["Hotel Indigo"].tap()
+//        let backToTheMap = app.navigationBars["CleanFlickr.PhotoDetailView"].buttons["Flickr image search"]
+//        backToTheMap.tap()
+//        let map = app.otherElements["PopoverDismissRegion"]
+//        map.tap()
+//        backToTheMap.tap()
+//        map.swipeLeft()
+//        sleep(3)
+//        app.otherElements["Wuppertal"].tap()
+//        sleep(3)
     }
     
 }
