@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYJ-MQ-BzU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="OiR-id-PVK">
+            <objects>
+                <navigationController id="BYJ-MQ-BzU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AtV-eM-bHw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="F4N-bk-32l" kind="relationship" relationship="rootViewController" id="fAa-ps-zaH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27R-ib-Gjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1546" y="73"/>
+        </scene>
+        <!--Flickr image search-->
+        <scene sceneID="7iL-JS-2mc">
+            <objects>
+                <viewController storyboardIdentifier="MapSearchViewController" id="F4N-bk-32l" customClass="MapSearchViewController" customModule="CleanFlickr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="igE-aQ-ber">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vv1-ao-RXU">
+                                <rect key="frame" x="27" y="147" width="321" height="490"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="zal-Oy-S9g">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vv1-ao-RXU" firstAttribute="top" secondItem="zal-Oy-S9g" secondAttribute="bottom" constant="27" id="PJS-wS-SI1"/>
+                            <constraint firstItem="BxW-Iy-znl" firstAttribute="trailing" secondItem="vv1-ao-RXU" secondAttribute="trailing" constant="27" id="WWl-03-2JF"/>
+                            <constraint firstItem="zal-Oy-S9g" firstAttribute="top" secondItem="BxW-Iy-znl" secondAttribute="top" id="aG5-rM-EFM"/>
+                            <constraint firstItem="zal-Oy-S9g" firstAttribute="leading" secondItem="BxW-Iy-znl" secondAttribute="leading" id="cSN-ID-Ez0"/>
+                            <constraint firstItem="vv1-ao-RXU" firstAttribute="leading" secondItem="BxW-Iy-znl" secondAttribute="leading" constant="27" id="hye-PQ-2TT"/>
+                            <constraint firstItem="BxW-Iy-znl" firstAttribute="bottom" secondItem="vv1-ao-RXU" secondAttribute="bottom" constant="30" id="te5-km-1np"/>
+                            <constraint firstItem="BxW-Iy-znl" firstAttribute="trailing" secondItem="zal-Oy-S9g" secondAttribute="trailing" id="v52-gr-RoO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BxW-Iy-znl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Flickr image search" id="Pnk-z6-2bz"/>
+                    <connections>
+                        <outlet property="mapView" destination="vv1-ao-RXU" id="Vqx-fI-PIN"/>
+                        <outlet property="searchBar" destination="zal-Oy-S9g" id="yep-TP-X6h"/>
+                        <segue destination="NP9-cv-B4d" kind="show" identifier="PhotoDetail" id="YxR-jz-FMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KgC-8G-0Bz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620" y="74"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="7eW-8K-Tkt">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NP9-cv-B4d" customClass="PhotoDetailViewController" customModule="CleanFlickr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6kr-PX-6dl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xOd-H1-6ZR">
+                                <rect key="frame" x="16" y="64" width="343" height="299"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MdE-T8-QPk" firstAttribute="trailing" secondItem="xOd-H1-6ZR" secondAttribute="trailing" constant="16" id="LhS-wG-UFt"/>
+                            <constraint firstItem="MdE-T8-QPk" firstAttribute="bottom" secondItem="xOd-H1-6ZR" secondAttribute="bottom" constant="304" id="QS9-SX-8o0"/>
+                            <constraint firstItem="xOd-H1-6ZR" firstAttribute="top" secondItem="MdE-T8-QPk" secondAttribute="top" id="eju-ld-wOe"/>
+                            <constraint firstItem="xOd-H1-6ZR" firstAttribute="leading" secondItem="MdE-T8-QPk" secondAttribute="leading" constant="16" id="wRQ-3D-SNL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MdE-T8-QPk"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayedPhoto" destination="xOd-H1-6ZR" id="abN-HR-pfu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fuv-6b-IwQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="73"/>
+        </scene>
+    </scenes>
+</document>
