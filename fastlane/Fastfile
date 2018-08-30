@@ -13,17 +13,28 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+
 default_platform(:ios)
 
 platform :ios do
-  desc "Push a new beta build to HockeyApp"
-  lane :from_testing_travis_to_signing_fastlane do |options|
+  desc "Push a new beta build to TestFlight"
+  lane :beta do |options|
     scheme = "CleanFlickr"
     if options[:scheme]
       scheme = options[:scheme]
     end
     configuration = options[:configuration]
     export_method = options[:export_method]
+    create_keychain(
+      name: ENV["MATCH_KEYCHAIN_NAME"],
+      password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      add_to_search_list: true
+    )
+    disable_automatic_code_signing(path: "CleanFlickr.xcworkspace")
     gym(scheme: scheme, configuration: configuration, export_method:export_method, export_xcargs: "-allowProvisioningUpdates", output_name:"CleanFlickr.ipa")
+    enable_automatic_code_signing(path: "CleanFlickr.xcworkspace")
   end
 end
