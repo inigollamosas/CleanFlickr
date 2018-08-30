@@ -16,9 +16,14 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Push a new beta build to TestFlight"
-  lane :beta do
-    build_app(scheme: "CleanFlickr")
-    upload_to_testflight
+  desc "Push a new beta build to HockeyApp"
+  lane :build do |options|
+    scheme = "CleanFlickr"
+    if options[:scheme]
+      scheme = options[:scheme]
+    end
+    configuration = options[:configuration]
+    export_method = options[:export_method]
+    gym(scheme: scheme, configuration: configuration, export_method:export_method, output_name:"CleanFlickr.ipa")
   end
 end

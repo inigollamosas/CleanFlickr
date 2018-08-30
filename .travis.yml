@@ -4,4 +4,4 @@ xcode_project: CleanFlickr.xcodeproj
 xcode_scheme: CleanFlickr
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
 script:
-  - fastlane beta
+  - fastlane from_testing_travis_to_signing_fastlane
