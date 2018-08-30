@@ -347,16 +347,13 @@
 				TargetAttributes = {
 					6A4B5F8821346B24006CE699 = {
 						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Manual;
 						TestTargetID = 6A5D4233212FF8F000349332;
 					};
 					6A5D4233212FF8F000349332 = {
 						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Manual;
 					};
 					6A5D4247212FF8F200349332 = {
 						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Manual;
 						TestTargetID = 6A5D4233212FF8F000349332;
 					};
 				};
@@ -506,7 +503,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 9YNCBLDA53;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CleanFlickrUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -527,7 +524,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 9YNCBLDA53;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CleanFlickrUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -671,6 +668,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.happnz.CleanFlickr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3f7ddf49-694b-4a62-9cce-75fbe31aa767";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.happnz.CleanFlickr";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -691,6 +689,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.happnz.CleanFlickr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3f7ddf49-694b-4a62-9cce-75fbe31aa767";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.happnz.CleanFlickr";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
