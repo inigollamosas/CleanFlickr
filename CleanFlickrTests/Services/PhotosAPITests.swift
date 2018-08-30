@@ -60,7 +60,7 @@ class PhotosAPITests: XCTestCase
         waitForExpectations(timeout: 3.0)
         
         // Then
-        XCTAssertEqual(fetchedPhotos.count, testPhotos.count, "fetchedPhotos() should return a list of photos")
+        XCTAssertEqual(fetchedPhotos.count, testPhotos.count - 1, "fetchedPhotos() should return a list of photos")
         for photo in fetchedPhotos {
             XCTAssert(testPhotos.contains(photo), "Fetched photos should match the photos in the API call")
         }
