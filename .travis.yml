@@ -3,3 +3,5 @@ osx_image: xcode9.4
 xcode_project: CleanFlickr.xcodeproj
 xcode_scheme: CleanFlickr
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
+script:
+  - fastlane beta

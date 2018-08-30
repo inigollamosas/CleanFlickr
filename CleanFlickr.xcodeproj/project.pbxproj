@@ -13,7 +13,6 @@
 		6A5D423D212FF8F000349332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5D423B212FF8F000349332 /* Main.storyboard */; };
 		6A5D423F212FF8F100349332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A5D423E212FF8F100349332 /* Assets.xcassets */; };
 		6A5D4242212FF8F100349332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5D4240212FF8F100349332 /* LaunchScreen.storyboard */; };
-		6A5D424D212FF8F200349332 /* CleanFlickrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5D424C212FF8F200349332 /* CleanFlickrTests.swift */; };
 		6A5D426D212FFA4700349332 /* MapSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5D4267212FFA4700349332 /* MapSearchPresenter.swift */; };
 		6A5D426E212FFA4700349332 /* MapSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5D4267212FFA4700349332 /* MapSearchPresenter.swift */; };
 		6A5D4273212FFA4700349332 /* MapSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5D4269212FFA4700349332 /* MapSearchRouter.swift */; };
@@ -78,7 +77,6 @@
 		6A5D4241212FF8F100349332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A5D4243212FF8F100349332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A5D4248212FF8F200349332 /* CleanFlickrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanFlickrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A5D424C212FF8F200349332 /* CleanFlickrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanFlickrTests.swift; sourceTree = "<group>"; };
 		6A5D424E212FF8F200349332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A5D4267212FFA4700349332 /* MapSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchPresenter.swift; sourceTree = "<group>"; };
 		6A5D4269212FFA4700349332 /* MapSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchRouter.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				6A5D42AD2133E10400349332 /* Scenes */,
 				6A5D42AC2133E0FC00349332 /* Workers */,
 				6A5D42AB2133E0EF00349332 /* Services */,
-				6A5D424C212FF8F200349332 /* CleanFlickrTests.swift */,
 				6A5D42BD2133FAFF00349332 /* Seeds.swift */,
 			);
 			path = CleanFlickrTests;
@@ -457,7 +454,6 @@
 				6A5D427D212FFA4700349332 /* MapSearchInteractor.swift in Sources */,
 				6A5D4282213000E300349332 /* PhotosWorker.swift in Sources */,
 				6A5D4274212FFA4700349332 /* MapSearchRouter.swift in Sources */,
-				6A5D424D212FF8F200349332 /* CleanFlickrTests.swift in Sources */,
 				6A5D42B62133E2F500349332 /* MapSearchInteractorTests.swift in Sources */,
 				6A5D42A62132F4D100349332 /* PhotoDetailViewController.swift in Sources */,
 				6A5D429A2132F4D100349332 /* PhotoDetailPresenter.swift in Sources */,
