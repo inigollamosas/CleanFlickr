@@ -36,7 +36,7 @@ platform :ios do
       scheme = options[:scheme]
     end
     configuration = options[:configuration]
-    export_method = options[:export_method]
+    export_method = "ad-hoc"
     disable_automatic_code_signing(path: "CleanFlickr.xcodeproj")
     gym(scheme: scheme, configuration: configuration, export_method:export_method, export_xcargs: "-allowProvisioningUpdates", output_name:"CleanFlickr.ipa")
     enable_automatic_code_signing(path: "CleanFlickr.xcodeproj")
