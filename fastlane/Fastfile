@@ -18,14 +18,9 @@ default_platform(:ios)
 
 platform :ios do
   desc "Push a new beta build to TestFlight"
-  lane :beta do |options|
-    scheme = "CleanFlickr"
-    if options[:scheme]
-      scheme = options[:scheme]
-    end
-    configuration = options[:configuration]
-    export_method = options[:export_method]
-    create_keychain(
+
+  before_all do |lane, options|
+  	create_keychain(
       name: ENV["MATCH_KEYCHAIN_NAME"],
       password: ENV["MATCH_KEYCHAIN_PASSWORD"],
       default_keychain: true,
@@ -33,8 +28,17 @@ platform :ios do
       timeout: 3600,
       add_to_search_list: true
     )
-    disable_automatic_code_signing(path: "CleanFlickr.xcworkspace")
+  end
+
+  lane :beta do |options|
+    scheme = "CleanFlickr"
+    if options[:scheme]
+      scheme = options[:scheme]
+    end
+    configuration = options[:configuration]
+    export_method = options[:export_method]
+    disable_automatic_code_signing(path: "CleanFlickr.xcodeproj")
     gym(scheme: scheme, configuration: configuration, export_method:export_method, export_xcargs: "-allowProvisioningUpdates", output_name:"CleanFlickr.ipa")
-    enable_automatic_code_signing(path: "CleanFlickr.xcworkspace")
+    enable_automatic_code_signing(path: "CleanFlickr.xcodeproj")
   end
 end
