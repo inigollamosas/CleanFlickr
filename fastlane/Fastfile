@@ -24,6 +24,6 @@ platform :ios do
     end
     configuration = options[:configuration]
     export_method = options[:export_method]
-    gym(scheme: scheme, configuration: configuration, export_method:export_method, output_name:"CleanFlickr.ipa")
+    gym(scheme: scheme, configuration: configuration, export_method:export_method, export_xcargs: "-allowProvisioningUpdates", output_name:"CleanFlickr.ipa")
   end
 end
